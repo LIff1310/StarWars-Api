@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Oswald&family=Poppins:ital,wght@0,100;0,300;0,400;0,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- Correct Handlebars CDN link -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+    <!-- Update template ID and attributes according to new structure -->
+    <script id="pokeCard" type="text/x-handlebars-template">
+        {{#each characters}}
+        <div class="card">
+            <div class="left" style="background-image: url('{{imageurl}}');"></div>
+            <div class="right">
+                <h1 class="poke-name">{{name}}</h1>
+                <p class="character-height">Height: {{height}} cm</p>
+                <p class="character-gender">Gender: {{gender}}</p>
+                <a class="poke-api" href="{{url}}" target="_blank">API URL</a>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    
+    <title>Star Wars Characters</title>
+</head>
+<body>
+    <header>
+        <h2 class="logo">Star Wars Characters</h2>
+        <span id="menu"></span>
+    </header>
+
+    <main>
+        <article id="content">
+
+        </article>
+        <aside>
+            <div class="profile-card">
+                <img src="images/contohfoto.jpeg" alt="">
+                <div class="profile-info">
+                    <p>Created By</p>
+                    <h1>Muhammad Alif Firjatullah</h1>
+                </div>
+
+                <div class="socials">
+                    <a href="insta" class="icon instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
+                    <a href="linkedin" class="icon linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+                    <a href="mail" class="icon mail" target="_blank"><i class="bx bxl-envelope"></i></a>
+                </div>
+
+                <div>
+                    <button style="display: block; margin: 30px auto; font-size: 30px;">Load More</button>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; <span id="yearText"></span></p>
+    </footer>
+
+    <script src="API.js"></script>
+</body>
+</html>
+# StarWars-Api
